@@ -1,0 +1,11 @@
+apps:
+  - name: Default
+    script: artisan
+    exec_mode: fork
+    interpreter: php
+    instances: 1
+    args:
+      - queue:work
+      - --tries=2
+      - --sleep=1
+
